@@ -27,12 +27,13 @@ import {
   SphereGeometry,
   Object3D,
   IcosahedronGeometry,
+  MathUtils,
 } from "three";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
-import { degToRad } from "three/src/math/mathutils";
 import "three/examples/fonts/droid/droid_sans_regular.typeface.json";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry";
+let { degToRad } = MathUtils;
 
 let config = {
   frame: {

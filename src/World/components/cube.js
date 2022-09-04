@@ -6,7 +6,7 @@ import {
   MeshStandardMaterial,
   TextureLoader,
 } from "three";
-import { degToRad } from "three/src/math/mathutils";
+const { degToRad } = MathUtils;
 
 function createMaterial() {
   const textureLoader = new TextureLoader();

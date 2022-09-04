@@ -17,7 +17,7 @@ import {
   Vector3,
   Path,
 } from "three";
-import { degToRad } from "three/src/math/mathutils";
+const { degToRad } = MathUtils;
 
 export function createMeshGroup() {
   const group = new Group();

@@ -1,5 +1,7 @@
+import { MathUtils } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { degToRad } from "three/src/math/mathutils";
+
+const { degToRad } = MathUtils;
 export function createControls(camera, canvas) {
   const controls = new OrbitControls(camera, canvas);
   //   controls.dampingFactor = "5";
