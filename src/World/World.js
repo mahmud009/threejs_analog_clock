@@ -14,7 +14,6 @@ import {
   Group,
   DirectionalLightHelper,
 } from "three";
-import { degToRad } from "three/src/math/mathutils";
 import { Loop } from "./systems/Loop";
 import { createControls } from "./systems/controls";
 import { createSphere } from "./components/sphere";
