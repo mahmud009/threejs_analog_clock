@@ -31,7 +31,7 @@ import {
 } from "three";
 import { Font, FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
-import "three/examples/fonts/droid/droid_sans_regular.typeface.json";
+// import "three/examples/fonts/droid/droid_sans_regular.typeface.json";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry";
 import { Bungee_regular } from "./Bungee_regular";
 
@@ -262,8 +262,9 @@ export function createClock3d() {
   const hour = createHour();
   const centerSphere = createCenterSphere();
   const particles = createParticles();
-
-  let numbers = createNumbers(new Font(Bungee_regular));
+  const font = new Font(Bungee_regular);
+  console.log(font);
+  let numbers = createNumbers(font);
   group.add(numbers);
 
   // loader.load("./assets/fonts/Bungee_regular.json", (font) => {
