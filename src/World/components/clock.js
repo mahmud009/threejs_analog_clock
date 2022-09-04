@@ -260,7 +260,7 @@ export function createClock3d() {
   const hour = createHour();
   const centerSphere = createCenterSphere();
   const particles = createParticles();
-  loader.load("./assets/fonts/Bungee_regular.json", (font) => {
+  loader.load("assets/fonts/Bungee_regular.json", (font) => {
     let numbers = createNumbers(font);
     group.add(numbers);
   });
