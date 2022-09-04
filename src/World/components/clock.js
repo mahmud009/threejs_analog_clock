@@ -33,7 +33,7 @@ import { Font, FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 // import "three/examples/fonts/droid/droid_sans_regular.typeface.json";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry";
-import { Bungee_regular } from "./Bungee_regular";
+import { bungeeFont } from "./bungee";
 
 let { degToRad } = MathUtils;
 
@@ -262,7 +262,7 @@ export function createClock3d() {
   const hour = createHour();
   const centerSphere = createCenterSphere();
   const particles = createParticles();
-  const font = new Font(Bungee_regular);
+  const font = new Font(bungeeFont);
   console.log(font);
   let numbers = createNumbers(font);
   group.add(numbers);

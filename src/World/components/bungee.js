@@ -1,4 +1,4 @@
-export const Bungee_regular = {
+export const bungeeFont = {
   glyphs: {
     0: {
       ha: 1010,
