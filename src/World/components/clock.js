@@ -29,10 +29,12 @@ import {
   IcosahedronGeometry,
   MathUtils,
 } from "three";
-import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
+import { Font, FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import "three/examples/fonts/droid/droid_sans_regular.typeface.json";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry";
+import { Bungee_regular } from "./Bungee_regular";
+
 let { degToRad } = MathUtils;
 
 let config = {
@@ -260,10 +262,15 @@ export function createClock3d() {
   const hour = createHour();
   const centerSphere = createCenterSphere();
   const particles = createParticles();
-  loader.load("public/assets/fonts/Bungee_regular.json", (font) => {
-    let numbers = createNumbers(font);
-    group.add(numbers);
-  });
+
+  let numbers = createNumbers(new Font(Bungee_regular));
+  group.add(numbers);
+
+  // loader.load("./assets/fonts/Bungee_regular.json", (font) => {
+  //   console.log(font);
+  //   let numbers = createNumbers(font);
+  //   group.add(numbers);
+  // });
 
   group.add(box, second, minute, hour, centerSphere, particles);
 
