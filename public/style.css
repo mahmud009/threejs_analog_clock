@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#scene-container {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: skyblue;
+
+  background: linear-gradient(to top, #001329, #08414B); /* Chrome 10-25, Safari 5.1-6 */
+}
