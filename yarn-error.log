@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\mahmud\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add cities.json
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\lua;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Android\Android Studio\jre\bin;E:\xampp\php\php.exe;E:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\Users\mahmud\AppData\Local\Microsoft\WindowsApps;C:\Users\mahmud\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\GitHub CLI\;C:\Users\mahmud\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;C:\Users\mahmud\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\mahmud\AppData\Roaming\Composer\vendor\bin;C:\Users\mahmud\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: 63676:error:1408F119:SSL routines:ssl3_get_record:decryption failed or bad record mac:c:\ws\deps\openssl\openssl\ssl\record\ssl3_record.c:677:
+
+npm manifest: 
+  {
+    "name": "threejs_project",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "build": "webpack --config ./webpack.prod.js",
+      "dev": "webpack serve --config ./webpack.dev.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "copy-webpack-plugin": "^11.0.0",
+      "file-loader": "^6.2.0",
+      "style-loader": "^3.3.1",
+      "webpack": "^5.74.0",
+      "webpack-cli": "^4.10.0",
+      "webpack-dev-server": "^4.10.0",
+      "webpack-merge": "^5.8.0"
+    },
+    "dependencies": {
+      "html-webpack-plugin": "^5.5.0",
+      "three": "^0.143.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -13,14 +13,16 @@ import {
   SphereBufferGeometry,
   Group,
   DirectionalLightHelper,
+  AxesHelper,
 } from "three";
 import { Loop } from "./systems/Loop";
 import { createControls } from "./systems/controls";
 import { createSphere } from "./components/sphere";
 import { createMeshGroup } from "./components/meshGroup";
 import { createAxesHelper, createGridHelper } from "./components/helper";
-import { createClock3d } from "./components/clock";
-import { createWorld3d } from "./components/world3d";
+import { createClock3d } from "./components/clock3d/clock3d";
+import { createEarth3d } from "./components/earth3d/earth3d";
+import { createParticles } from "./components/particles";
 
 export class World {
   constructor(container) {
@@ -36,14 +38,11 @@ export class World {
     });
 
     const lights = createLights();
-    // const meshGroup = createMeshGroup();
-    // const world3d = createWorld3d();
+    const earth3d = createEarth3d();
     const clock3d = createClock3d();
-    this.scene.add(clock3d);
-
-    this.scene.add(lights);
-    this.loop.updatables.push(controls, clock3d);
-
+    const particles = createParticles();
+    this.scene.add(lights, particles, earth3d, createGridHelper(16));
+    this.loop.updatables.push(controls, earth3d, particles);
     new Resizer(container, this.camera, this.renderer);
   }
 

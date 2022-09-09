@@ -19,6 +19,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "cities.json": "^1.1.13",
     "html-webpack-plugin": "^5.5.0",
     "three": "^0.143.0"
   }
