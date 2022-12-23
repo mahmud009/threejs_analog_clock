@@ -1,4 +1,4 @@
-import { Group, Clock } from "three";
+import { Group, Clock, Vector3 } from "three";
 import { Font } from "three/examples/jsm/loaders/FontLoader";
 import { bungeeFont } from "../fonts/bungee";
 import { createFrame } from "./frame";
@@ -8,7 +8,7 @@ import { createHour } from "./hour";
 import { createNumbers } from "./numbers";
 import { createCenter } from "./center";
 
-export function createClock3d() {
+export function createClock3d({ position: { x, y, z } }) {
   const group = new Group();
   const frame = createFrame();
   const second = createSecond();
@@ -17,6 +17,7 @@ export function createClock3d() {
   const center = createCenter();
   const numbers = createNumbers();
   group.add(frame, second, minute, hour, center, numbers);
+  group.position.set(x, y, z);
 
   let clock = new Clock();
   group.tick = () => {

@@ -39,9 +39,10 @@ export class World {
 
     const lights = createLights();
     const earth3d = createEarth3d();
-    const clock3d = createClock3d();
+    // const clock3d = createClock3d({ position: { x: 0, y: 0, z: 0 } });
     const particles = createParticles();
-    this.scene.add(lights, particles, earth3d, createGridHelper(16));
+    const gridHelper = createAxesHelper();
+    this.scene.add(lights, particles, earth3d, gridHelper);
     this.loop.updatables.push(controls, earth3d, particles);
     new Resizer(container, this.camera, this.renderer);
   }

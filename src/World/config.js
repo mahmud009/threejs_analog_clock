@@ -36,6 +36,6 @@ export let config = {
   earth: {
     color: "#204C6B",
     landColor: "#47A9EE",
-    radius: 4,
+    radius: 2,
   },
 };

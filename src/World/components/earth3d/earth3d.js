@@ -15,6 +15,7 @@ import { config } from "../../config";
 import { cities2 } from "./cities";
 import cities from "cities.json";
 import { createLine } from "../helper";
+import { createClock3d } from "../clock3d/clock3d";
 
 export function createEarth3d() {
   const { degToRad } = MathUtils;
@@ -22,13 +23,13 @@ export function createEarth3d() {
   const group = new Group();
   let geometry = new SphereGeometry(radius, 32, 32);
   let edges = new EdgesGeometry(geometry);
-  let material = new MeshPhongMaterial({ color });
+  let material = new MeshPhongMaterial({ color, flatShading: true });
   let sphere = new Mesh(geometry, material);
   group.add(sphere);
 
   let { sin, cos } = Math;
 
-  let r = radius + 1;
+  let r = radius + 15;
   for (let city of cities2) {
     let lat = degToRad(city.lng);
     let lng = degToRad(city.lat);
@@ -42,6 +43,11 @@ export function createEarth3d() {
       color: "orange",
     });
     group.add(line);
+    const clock3d = createClock3d(createClock3d({ position: { x, y, z } }));
+    // clock3d.rotateX(lat);
+    clock3d.rotateY(lng);
+    // clock3d.rotateZ(lat);
+    group.add(clock3d);
   }
 
   //let r = radius + 1;
