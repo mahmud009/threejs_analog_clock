@@ -10,7 +10,7 @@ import {
 
 export function createAxesHelper() {
   const helper = new AxesHelper(6.5);
-  console.log(helper);
+  // const helper = createGridHelper();
   helper.position.set(-3.5, 0, -3.5);
   return helper;
 }

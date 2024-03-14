@@ -1,3 +1,9 @@
+export const clockTheme = {
+  colors: {
+    primary: "#00FF7F",
+  },
+};
+
 export let config = {
   frame: {
     radius: 5.5,
